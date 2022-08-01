@@ -2,7 +2,7 @@ from numpy import ndarray
 from scipy.fftpack import fft
 import numpy as np
 from scipy.signal import welch
-from outerimport.detect_peaks import detect_peaks
+from detect_peaks import detect_peaks
 from typing import Tuple
 import os
 import matplotlib.pyplot as plt

@@ -21,6 +21,10 @@ API
    :members:
 .. automodule:: preprocessing
    :members:
+.. automodule:: decorators
+   :members:
+.. automodule:: detect_peaks
+   :members:
 
 Indices and tables
 ==================

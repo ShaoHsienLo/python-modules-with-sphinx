@@ -7,7 +7,7 @@ from loguru import logger
 import paho.mqtt.client as mqtt
 import psycopg2
 import json
-from pythonprojects.pythonmodules.src.decorators import deprecated
+from decorators import deprecated
 
 
 @deprecated

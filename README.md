@@ -1,7 +1,7 @@
-pythonmodules:
+C:.
+│  README.md
+│
 └─pythonmodules
-    │  README.md
-    │
     ├─docs
     │  │  make.bat
     │  │  Makefile

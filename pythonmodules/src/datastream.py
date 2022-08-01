@@ -65,7 +65,8 @@ class Connector:
     Returns
     -------
     None or Dataframe
-        If mqtt, no return. If postgres, return dataframe
+        - If mqtt, no return.
+        - If postgres, return dataframe
     """
 
     def __init__(self, **kwargs):

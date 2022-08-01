@@ -1,3 +1,4 @@
+import pandas as pd
 from numpy import ndarray
 from scipy.fftpack import fft
 import numpy as np
@@ -6,6 +7,66 @@ from detect_peaks import detect_peaks
 from typing import Tuple
 import os
 import matplotlib.pyplot as plt
+from scipy.stats import skew, kurtosis
+
+
+class TimeDomain:
+    """
+
+
+    Parameters
+    ----------
+
+
+    Returns
+    -------
+    None or Dataframe
+    """
+
+    def __init__(self, dataset: pd.DataFrame, window: int = 100, plot: bool = False,
+                 time_col: str = "Timestamp"):
+        self.dataset = dataset
+        self.window = window
+        self.plot = plot
+        self.time_col = time_col
+
+    def skew(self, x):
+        x = skew(np.array(x))
+        return x
+
+    def rms(self, x):
+        return np.sqrt(np.mean(np.power(x.values, 2)))
+
+    def ptp(self, x):
+        return np.ptp(x.values)
+
+    def kur(self, x):
+        return kurtosis(np.array(x.values))
+
+    def crest(self, x):
+        return max(x.values) / np.sqrt(np.mean(np.power(x.values, 2)))
+
+    def shape(self, x):
+        return np.sqrt(np.mean(np.power(x.values, 2))) / np.mean(np.abs(x.values))
+
+    def impulse(self, x):
+        return max(x.values) / np.mean(np.abs(x.values))
+
+    def margin(self, x):
+        return max(x.values) / np.power(np.mean(np.abs(x.values)), 2)
+
+    def time_domain(self):
+        agg_functions = ["mean", "std", "min", "max", "skew", "kurt", self.rms, self.ptp, self.crest,
+                         self.shape, self.impulse, self.margin]
+        dataframe = self.dataset.groupby([self.time_col]).agg(agg_functions)
+        dataframe.columns = ["{}_{}".format(col[0], col[1]) for col in dataframe.columns]
+        dataframe_ = dataframe.rolling(2).mean()
+        dataframe_.columns = ["{}_rolling_avg".format(col) for col in dataframe_.columns]
+        dataframe = pd.concat([dataframe, dataframe_], axis=1)
+        dataframe = dataframe.fillna(method="bfill")
+        dataframe.insert(0, self.time_col, dataframe.index)
+        dataframe = dataframe.reset_index(drop=True)
+        return dataframe
 
 
 def get_values(y_values: list, f_s: int) -> Tuple[list, list]:

@@ -10,17 +10,26 @@ import matplotlib.pyplot as plt
 from scipy.stats import skew, kurtosis
 
 
-class TimeDomain:
+class TimeDomainAnalysis:
     """
-
+    Define some statistical functions (mean, max, etc.) and
+    average the data for each second to get the trend by sliding window
 
     Parameters
     ----------
-
+    dataset: Dataframe
+        data
+    window: int
+        number of windows (sliding window), the default is 100
+    plot: bool
+        Whether to plot, the default is false
+    time_col: str
+        The column name of the timestamp, the default is Timestamp
 
     Returns
     -------
     None or Dataframe
+        The result after time domain analysis if calls time_domain function
     """
 
     def __init__(self, dataset: pd.DataFrame, window: int = 100, plot: bool = False,

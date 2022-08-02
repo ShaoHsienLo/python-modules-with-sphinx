@@ -91,7 +91,7 @@ def get_values(y_values: list, f_s: int) -> Tuple[list, list]:
 
     Returns
     -------
-    Tuple: a tuple containing:
+    Tuple
         - x_values (list): Index of signal data
         - y_values (list): Signal data
     """
@@ -120,7 +120,7 @@ def get_fft_values(y_values: list, T: float, N: int, plot: bool = False, path: s
 
     Returns
     -------
-    Tuple: a tuple containing:
+    Tuple
         - f_values (ndarray): Index of fast fourier transform
         - fft_values (float): Fast fourier transform signal data
     """
@@ -173,7 +173,7 @@ def get_psd_values(y_values: list, f_s: int, plot: bool = False, path: str = Non
 
     Returns
     -------
-    Tuple: a tuple containing:
+    Tuple
         - f_values (ndarray): Index of fast fourier transform
         - psd_values (ndarray): Power spectral density signal data
     """
@@ -246,7 +246,7 @@ def get_autocorr_values(y_values: list, T: float, N: int, plot: bool = False, pa
 
     Returns
     -------
-    Tuple: a tuple containing:
+    Tuple
         - x_values (ndarray): Index of the sequence
         - autocorr_values (ndarray): The value of the sequence autocorrelation
     """
@@ -295,7 +295,7 @@ def get_first_n_peaks(x: list, y: list, no_peaks: int = 5) -> Tuple[list, list]:
 
     Returns
     -------
-    Tuple: a tuple containing:
+    Tuple
         - x [list]: Indexes of the first few peaks
         - y [list]: Values of the first few peaks
     """
@@ -357,7 +357,7 @@ def extract_features_labels(dataset: ndarray, labels: ndarray, T: float, N: int,
 
     Returns
     -------
-    Tuple: a tuple containing:
+    Tuple
         - X [ndarray]: Input data in  the machine learning model
         - y [ndarray]: Input label in the machine learning model
     """

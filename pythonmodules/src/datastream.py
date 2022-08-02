@@ -7,44 +7,6 @@ from loguru import logger
 import paho.mqtt.client as mqtt
 import psycopg2
 import json
-from decorators import deprecated
-
-
-@deprecated
-def read_file(source: str, file_format="csv") -> pd.DataFrame:
-    """
-    Reads csv or json file
-
-    Parameters
-    ----------
-    source : str
-        Absolute path to the file (path and filename)
-    file_format: str
-        The format of the file, supports csv and json, the default is `csv`
-
-    Returns
-    -------
-    Dataframe
-        The result of reading the file
-    """
-
-    logger.info("Reading file ...")
-
-    '''
-    Check whether the file format matches, return the dataframe if successful, and exit if it fails.
-    '''
-    try:
-        if file_format == "csv":
-            dataframe = pd.read_csv(source)
-        elif file_format == "json":
-            dataframe = pd.read_json(source)
-        else:
-            logger.error("File format does not match.")
-            sys.exit(0)
-        return dataframe
-    except Exception as e:
-        logger.error(e)
-        sys.exit(0)
 
 
 class Connector:

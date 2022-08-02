@@ -76,34 +76,28 @@
 <span id="api"></span><h1>API<a class="headerlink" href="#module-settings" title="Permalink to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="settings.read_config_file">
-<span class="sig-prename descclassname"><span class="pre">settings.</span></span><span class="sig-name descname"><span class="pre">read_config_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'config.json'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#settings.read_config_file" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">settings.</span></span><span class="sig-name descname"><span class="pre">read_config_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'config.ini'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">&lt;module</span> <span class="pre">'configparser'</span> <span class="pre">from</span> <span class="pre">'C:\\Users\\samuello\\Anaconda3\\envs\\sphinx\\lib\\configparser.py'&gt;</span></span></span><a class="headerlink" href="#settings.read_config_file" title="Permalink to this definition"></a></dt>
 <dd><p>Read configuration file</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>path</strong> (<em>str</em>) – Absolute path to the configuration file</p></li>
-<li><p><strong>filename</strong> (<em>str</em>) – Configuration file name, the default is <cite>config.json</cite></p></li>
-</ul>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – Configuration file name, the default is config.ini</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The result of reading the configuration file</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Dict</p>
+<dd class="field-odd"><p>Configparser</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="settings.set_logger">
-<span class="sig-prename descclassname"><span class="pre">settings.</span></span><span class="sig-name descname"><span class="pre">set_logger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#settings.set_logger" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">settings.</span></span><span class="sig-name descname"><span class="pre">set_logger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#settings.set_logger" title="Permalink to this definition"></a></dt>
 <dd><p>Configure the log file</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – The location where the log files are stored, the default is None</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>None</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -165,255 +159,9 @@
 
 </dd></dl>
 
-<dl class="py function">
-<dt class="sig sig-object py" id="datastream.read_file">
-<span class="sig-prename descclassname"><span class="pre">datastream.</span></span><span class="sig-name descname"><span class="pre">read_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'csv'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#datastream.read_file" title="Permalink to this definition"></a></dt>
-<dd><p>Reads csv or json file</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>source</strong> (<em>str</em>) – Absolute path to the file (path and filename)</p></li>
-<li><p><strong>file_format</strong> (<em>str</em>) – The format of the file, supports csv and json, the default is <cite>csv</cite></p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The result of reading the file</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Dataframe</p>
-</dd>
-</dl>
-</dd></dl>
-
-<span class="target" id="module-datatransformation"></span><dl class="py class">
-<dt class="sig sig-object py" id="datatransformation.TimeDomainAnalysis">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datatransformation.</span></span><span class="sig-name descname"><span class="pre">TimeDomainAnalysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_col</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Timestamp'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatransformation.TimeDomainAnalysis" title="Permalink to this definition"></a></dt>
-<dd><p>Define some statistical functions (mean, max, etc.) and
-average the data for each second to get the trend by sliding window</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>dataset</strong> (<em>Dataframe</em>) – data</p></li>
-<li><p><strong>window</strong> (<em>int</em>) – number of windows (sliding window), the default is 100</p></li>
-<li><p><strong>plot</strong> (<em>bool</em>) – Whether to plot, the default is false</p></li>
-<li><p><strong>time_col</strong> (<em>str</em>) – The column name of the timestamp, the default is Timestamp</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The result after time domain analysis if calls time_domain function</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>None or Dataframe</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="datatransformation.autocorr">
-<span class="sig-prename descclassname"><span class="pre">datatransformation.</span></span><span class="sig-name descname"><span class="pre">autocorr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#datatransformation.autocorr" title="Permalink to this definition"></a></dt>
-<dd><p>Autocorrelation of a 1-dimensional sequence.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>x</strong> (<em>list</em>) – A 1-dimensional sequence</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Autocorrelation of x</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>ndarray</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="datatransformation.extract_features_labels">
-<span class="sig-prename descclassname"><span class="pre">datatransformation.</span></span><span class="sig-name descname"><span class="pre">extract_features_labels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f_s</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">denominator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">ndarray</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#datatransformation.extract_features_labels" title="Permalink to this definition"></a></dt>
-<dd><p>Get the input data of X and Y for training or testing in the machine learning model</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>dataset</strong> (<em>ndarray</em>) – <dl class="simple">
-<dt>3D signal data (training or testing dataest)</dt><dd><ul>
-<li><p>First dimension: The total number of batch data</p></li>
-<li><p>Second dimension: The total number of sample data</p></li>
-<li><p>Third dimension: The total number of parameters</p></li>
-</ul>
-</dd>
-</dl>
-</p></li>
-<li><p><strong>labels</strong> (<em>ndarray</em>) – 1D Label data (training or testing dataest)</p></li>
-<li><p><strong>T</strong> (<em>float</em>) – Sampling interval</p></li>
-<li><p><strong>N</strong> (<em>int</em>) – Number of samples</p></li>
-<li><p><strong>f_s</strong> (<em>int</em>) – Sampling frequency</p></li>
-<li><p><strong>denominator</strong> (<em>int</em>) – Calculate the max peak height</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p>X [ndarray]: Input data in  the machine learning model</p></li>
-<li><p>y [ndarray]: Input label in the machine learning model</p></li>
-</ul>
-</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Tuple</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="datatransformation.get_autocorr_values">
-<span class="sig-prename descclassname"><span class="pre">datatransformation.</span></span><span class="sig-name descname"><span class="pre">get_autocorr_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">ndarray</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#datatransformation.get_autocorr_values" title="Permalink to this definition"></a></dt>
-<dd><p>Get the value of the sequence autocorrelation</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>y_values</strong> (<em>list</em>) – Signal data</p></li>
-<li><p><strong>T</strong> (<em>float</em>) – Sampling interval</p></li>
-<li><p><strong>N</strong> (<em>int</em>) – Number of samples</p></li>
-<li><p><strong>plot</strong> (<em>bool</em>) – Whether to plot, the default is false</p></li>
-<li><p><strong>path</strong> (<em>str</em>) – The location where the log files are stored, the default is None</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p>x_values (ndarray): Index of the sequence</p></li>
-<li><p>autocorr_values (ndarray): The value of the sequence autocorrelation</p></li>
-</ul>
-</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Tuple</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="datatransformation.get_features">
-<span class="sig-prename descclassname"><span class="pre">datatransformation.</span></span><span class="sig-name descname"><span class="pre">get_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#datatransformation.get_features" title="Permalink to this definition"></a></dt>
-<dd><p>Detect peak indexes and values</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>x_values</strong> (<em>list</em>) – Index of signal data</p></li>
-<li><p><strong>y_values</strong> (<em>list</em>) – Signal data</p></li>
-<li><p><strong>mph</strong> (<em>float</em>) – Max peak height</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The result is the indexes and values of the first N peaks</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>List</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="datatransformation.get_fft_values">
-<span class="sig-prename descclassname"><span class="pre">datatransformation.</span></span><span class="sig-name descname"><span class="pre">get_fft_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">ndarray</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#datatransformation.get_fft_values" title="Permalink to this definition"></a></dt>
-<dd><p>Do Fast Fourier Transform(FFT)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>y_values</strong> (<em>list</em>) – Signal data</p></li>
-<li><p><strong>T</strong> (<em>float</em>) – Sampling interval</p></li>
-<li><p><strong>N</strong> (<em>int</em>) – Number of samples</p></li>
-<li><p><strong>plot</strong> (<em>bool</em>) – Whether to plot, the default is false</p></li>
-<li><p><strong>path</strong> (<em>str</em>) – The location where the log files are stored, the default is None</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p>f_values (ndarray): Index of fast fourier transform</p></li>
-<li><p>fft_values (float): Fast fourier transform signal data</p></li>
-</ul>
-</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Tuple</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="datatransformation.get_first_n_peaks">
-<span class="sig-prename descclassname"><span class="pre">datatransformation.</span></span><span class="sig-name descname"><span class="pre">get_first_n_peaks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">no_peaks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#datatransformation.get_first_n_peaks" title="Permalink to this definition"></a></dt>
-<dd><p>Get the indexes and values of the first N peaks</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<em>list</em>) – Index of signal data</p></li>
-<li><p><strong>y</strong> (<em>list</em>) – Signal data</p></li>
-<li><p><strong>no_peaks</strong> (<em>int</em>) – First few peaks, the default is 5</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p>x [list]: Indexes of the first few peaks</p></li>
-<li><p>y [list]: Values of the first few peaks</p></li>
-</ul>
-</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Tuple</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="datatransformation.get_psd_values">
-<span class="sig-prename descclassname"><span class="pre">datatransformation.</span></span><span class="sig-name descname"><span class="pre">get_psd_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f_s</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">ndarray</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#datatransformation.get_psd_values" title="Permalink to this definition"></a></dt>
-<dd><p>Do Power Spectral Density(PSD)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>y_values</strong> (<em>list</em>) – Signal data</p></li>
-<li><p><strong>f_s</strong> (<em>int</em>) – Sampling frequency</p></li>
-<li><p><strong>plot</strong> (<em>bool</em>) – Whether to plot, the default is false</p></li>
-<li><p><strong>path</strong> (<em>str</em>) – The location where the log files are stored, the default is None</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p>f_values (ndarray): Index of fast fourier transform</p></li>
-<li><p>psd_values (ndarray): Power spectral density signal data</p></li>
-</ul>
-</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Tuple</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="datatransformation.get_values">
-<span class="sig-prename descclassname"><span class="pre">datatransformation.</span></span><span class="sig-name descname"><span class="pre">get_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f_s</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#datatransformation.get_values" title="Permalink to this definition"></a></dt>
-<dd><p>Generate index based on sampling frequency of signal data</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>y_values</strong> (<em>list</em>) – Signal data</p></li>
-<li><p><strong>f_s</strong> (<em>int</em>) – Sampling frequency</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p>x_values (list): Index of signal data</p></li>
-<li><p>y_values (list): Signal data</p></li>
-</ul>
-</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Tuple</p>
-</dd>
-</dl>
-</dd></dl>
-
 <span class="target" id="module-preprocessing"></span><dl class="py function">
 <dt class="sig sig-object py" id="preprocessing.convert_input_files_to_json_format">
-<span class="sig-prename descclassname"><span class="pre">preprocessing.</span></span><span class="sig-name descname"><span class="pre">convert_input_files_to_json_format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">read_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#preprocessing.convert_input_files_to_json_format" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">preprocessing.</span></span><span class="sig-name descname"><span class="pre">convert_input_files_to_json_format</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#preprocessing.convert_input_files_to_json_format" title="Permalink to this definition"></a></dt>
 <dd><p>Convert the input file to json format. The format of this input file must be</p>
 <blockquote>
 <div><p>{},</p>
@@ -422,27 +170,19 @@ average the data for each second to get the trend by sliding window</p>
 <p>{}</p>
 </div></blockquote>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>read_path</strong> (<em>str</em>) – Absolute path to the input file</p></li>
-<li><p><strong>write_path</strong> (<em>str</em>) – Absolute path to the write file, it cannot be the same as the read path</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>None</p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="preprocessing.merge_json_files_to_csv_file">
-<span class="sig-prename descclassname"><span class="pre">preprocessing.</span></span><span class="sig-name descname"><span class="pre">merge_json_files_to_csv_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">read_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_cols</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_err</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#preprocessing.merge_json_files_to_csv_file" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">preprocessing.</span></span><span class="sig-name descname"><span class="pre">merge_json_files_to_csv_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ignore_cols</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_err</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#preprocessing.merge_json_files_to_csv_file" title="Permalink to this definition"></a></dt>
 <dd><p>Merge json files into a csv file</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>read_path</strong> (<em>str</em>) – Absolute path to the input file</p></li>
-<li><p><strong>write_path</strong> (<em>str</em>) – Absolute path to the write file, it cannot be the same as the read path</p></li>
 <li><p><strong>ignore_cols</strong> (<em>list</em>) – Columns to be ignored, the default is none</p></li>
 <li><p><strong>filename</strong> (<em>str</em>) – Save file name, the default is none</p></li>
 <li><p><strong>ignore_err</strong> (<em>bool</em>) – Whether to ignore errors for merged files, the default is true</p></li>

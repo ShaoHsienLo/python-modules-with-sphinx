@@ -3,7 +3,7 @@ from numpy import ndarray
 from scipy.fftpack import fft
 import numpy as np
 from scipy.signal import welch
-from detect_peaks import detect_peaks
+from pythonprojects.pythonmodules.src.detect_peaks import detect_peaks
 from typing import Tuple
 import os
 import matplotlib.pyplot as plt
@@ -222,7 +222,7 @@ def autocorr(x: list) -> ndarray:
     """
 
     result = np.correlate(x, x, mode="full")
-    result = result[len(result)//2:]
+    result = result[len(result) // 2:]
     return result
 
 
@@ -376,8 +376,8 @@ def extract_features_labels(dataset: ndarray, labels: ndarray, T: float, N: int,
             # ijk = (100 - 2*percentile)/10
             mph = signal_min + (signal_max - signal_min) / denominator
 
-            features += get_features(*get_psd_values(signal, T, N, f_s), mph)
-            features += get_features(*get_fft_values(signal, T, N, f_s), mph)
-            features += get_features(*get_autocorr_values(signal, T, N, f_s), mph)
+            features += get_features(*get_psd_values(signal, f_s), mph)
+            features += get_features(*get_fft_values(signal, T, N), mph)
+            features += get_features(*get_autocorr_values(signal, T, N), mph)
         list_of_features.append(features)
     return np.array(list_of_features), np.array(list_of_labels)

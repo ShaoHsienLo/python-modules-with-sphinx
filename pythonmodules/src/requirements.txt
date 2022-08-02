@@ -1,0 +1,140 @@
+alabaster==0.7.12
+alembic==1.4.1
+attrs @ file:///home/conda/feedstock_root/build_artifacts/attrs_1640799537051/work
+Babel @ file:///home/conda/feedstock_root/build_artifacts/babel_1655419414885/work
+beautifulsoup4 @ file:///home/conda/feedstock_root/build_artifacts/beautifulsoup4_1649463573192/work
+bleach @ file:///home/conda/feedstock_root/build_artifacts/bleach_1656355450470/work
+blis==0.7.5
+Boruta==0.3
+brotlipy @ file:///D:/bld/brotlipy_1648854320485/work
+catalogue==1.0.0
+certifi==2022.6.15
+cffi @ file:///D:/bld/cffi_1656782950753/work
+charset-normalizer @ file:///home/conda/feedstock_root/build_artifacts/charset-normalizer_1655906222726/work
+colorama @ file:///home/conda/feedstock_root/build_artifacts/colorama_1655412516417/work
+colorlover==0.3.0
+commonmark==0.9.1
+cryptography @ file:///D:/bld/cryptography_1657174149370/work
+cufflinks==0.17.3
+cycler==0.11.0
+cymem==2.0.6
+Cython==0.29.14
+databricks-cli==0.16.2
+defusedxml @ file:///home/conda/feedstock_root/build_artifacts/defusedxml_1615232257335/work
+docker==5.0.3
+docutils==0.17.1
+entrypoints @ file:///home/conda/feedstock_root/build_artifacts/entrypoints_1643888246732/work
+fastjsonschema @ file:///home/conda/feedstock_root/build_artifacts/python-fastjsonschema_1658064924516/work/dist
+fonttools==4.34.4
+funcy==1.16
+future @ file:///D:/bld/future_1649010293110/work
+gensim==3.8.3
+ghp-import @ file:///home/conda/feedstock_root/build_artifacts/ghp-import_1651585738538/work
+gitdb==4.0.9
+GitPython==3.1.24
+htmlmin==0.1.12
+idna @ file:///home/conda/feedstock_root/build_artifacts/idna_1642433548627/work
+ImageHash==4.2.1
+imagesize @ file:///home/conda/feedstock_root/build_artifacts/imagesize_1656939531508/work
+imbalanced-learn==0.7.0
+importlib-metadata==4.12.0
+importlib-resources @ file:///home/conda/feedstock_root/build_artifacts/importlib_resources_1658604161399/work
+Jinja2 @ file:///home/conda/feedstock_root/build_artifacts/jinja2_1654302431367/work
+jsonschema @ file:///home/conda/feedstock_root/build_artifacts/jsonschema-meta_1657629641118/work
+jupyter-client @ file:///home/conda/feedstock_root/build_artifacts/jupyter_client_1654730843242/work
+jupyter_core @ file:///D:/bld/jupyter_core_1658332534377/work
+jupyterlab-pygments @ file:///home/conda/feedstock_root/build_artifacts/jupyterlab_pygments_1649936611996/work
+kiwisolver==1.4.4
+kmodes==0.11.1
+lightgbm==3.3.1
+loguru==0.6.0
+Mako==1.1.5
+MarkupSafe @ file:///D:/bld/markupsafe_1648737751065/work
+matplotlib==3.5.2
+missingno==0.5.0
+mistune @ file:///D:/bld/mistune_1635844874781/work
+mlflow==1.21.0
+mlxtend==0.19.0
+multimethod==1.6
+murmurhash==1.0.6
+nbclient @ file:///home/conda/feedstock_root/build_artifacts/nbclient_1656688109017/work
+nbconvert @ file:///home/conda/feedstock_root/build_artifacts/nbconvert-meta_1649676641343/work
+nbformat @ file:///home/conda/feedstock_root/build_artifacts/nbformat_1651607001005/work
+nbsphinx @ file:///home/conda/feedstock_root/build_artifacts/nbsphinx_1654375287323/work
+nest-asyncio @ file:///home/conda/feedstock_root/build_artifacts/nest-asyncio_1648959695634/work
+numpy==1.23.1
+packaging @ file:///home/conda/feedstock_root/build_artifacts/packaging_1637239678211/work
+paho-mqtt==1.6.1
+pandas==1.4.3
+pandas-profiling==3.1.0
+pandocfilters @ file:///home/conda/feedstock_root/build_artifacts/pandocfilters_1631603243851/work
+phik==0.12.0
+piccolo-theme==0.11.1
+Pillow==9.2.0
+plac==1.1.3
+plotly==5.3.1
+preshed==3.0.6
+prometheus-flask-exporter==0.18.5
+protobuf==3.19.1
+psycopg2==2.9.3
+pycaret==2.3.4
+pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1636257122734/work
+Pygments @ file:///home/conda/feedstock_root/build_artifacts/pygments_1650904496387/work
+pyLDAvis==3.2.2
+pynndescent==0.5.5
+pyod==0.9.5
+pyOpenSSL @ file:///home/conda/feedstock_root/build_artifacts/pyopenssl_1643496850550/work
+pyparsing @ file:///home/conda/feedstock_root/build_artifacts/pyparsing_1652235407899/work
+pyrsistent @ file:///D:/bld/pyrsistent_1649013505682/work
+PySocks @ file:///D:/bld/pysocks_1648857453381/work
+python-dateutil @ file:///home/conda/feedstock_root/build_artifacts/python-dateutil_1626286286081/work
+python-docs-theme==2022.1
+python-dotenv==0.20.0
+python-editor==1.0.4
+pytz @ file:///home/conda/feedstock_root/build_artifacts/pytz_1647961439546/work
+pywin32==303
+pyzmq @ file:///D:/bld/pyzmq_1656183679173/work
+querystring-parser==1.2.4
+recommonmark @ file:///home/conda/feedstock_root/build_artifacts/recommonmark_1608240755822/work
+requests @ file:///home/conda/feedstock_root/build_artifacts/requests_1656534056640/work
+scikit-plot==0.3.7
+scipy==1.8.1
+six @ file:///home/conda/feedstock_root/build_artifacts/six_1620240208055/work
+smart-open==5.2.1
+smmap==5.0.0
+snowballstemmer @ file:///home/conda/feedstock_root/build_artifacts/snowballstemmer_1637143057757/work
+soupsieve @ file:///home/conda/feedstock_root/build_artifacts/soupsieve_1658207591808/work
+spacy==2.3.7
+Sphinx==5.1.0
+sphinx-rtd-theme==1.0.0
+sphinxawesome-theme==3.3.1
+sphinxcontrib-applehelp==1.0.2
+sphinxcontrib-devhelp==1.0.2
+sphinxcontrib-htmlhelp @ file:///home/conda/feedstock_root/build_artifacts/sphinxcontrib-htmlhelp_1621704829796/work
+sphinxcontrib-jsmath==1.0.1
+sphinxcontrib-qthelp==1.0.3
+sphinxcontrib-serializinghtml @ file:///home/conda/feedstock_root/build_artifacts/sphinxcontrib-serializinghtml_1649380998999/work
+sqlparse==0.4.2
+srsly==1.0.5
+tabulate==0.8.9
+tangled-up-in-unicode==0.1.0
+tenacity==8.0.1
+textblob==0.17.1
+thinc==7.4.5
+tinycss2 @ file:///home/conda/feedstock_root/build_artifacts/tinycss2_1637612658783/work
+tornado @ file:///D:/bld/tornado_1656937958156/work
+tqdm==4.64.0
+traitlets @ file:///home/conda/feedstock_root/build_artifacts/traitlets_1655411388954/work
+umap-learn==0.5.2
+urllib3 @ file:///home/conda/feedstock_root/build_artifacts/urllib3_1658789158161/work
+visions==0.7.4
+waitress==2.0.0
+wasabi==0.8.2
+webencodings==0.5.1
+websocket-client==1.2.1
+win-inet-pton @ file:///D:/bld/win_inet_pton_1648771891747/work
+win32-setctime==1.1.0
+wincertstore==0.2
+wordcloud==1.8.1
+yellowbrick==1.3.post1
+zipp==3.8.1

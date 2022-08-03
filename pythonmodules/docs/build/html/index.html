@@ -161,8 +161,8 @@
 
 <span class="target" id="module-preprocessing"></span><dl class="py function">
 <dt class="sig sig-object py" id="preprocessing.convert_input_files_to_json_format">
-<span class="sig-prename descclassname"><span class="pre">preprocessing.</span></span><span class="sig-name descname"><span class="pre">convert_input_files_to_json_format</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#preprocessing.convert_input_files_to_json_format" title="Permalink to this definition"></a></dt>
-<dd><p>Convert the input file to json format. The format of this input file must be</p>
+<span class="sig-prename descclassname"><span class="pre">preprocessing.</span></span><span class="sig-name descname"><span class="pre">convert_input_files_to_json_format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ignore_err</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#preprocessing.convert_input_files_to_json_format" title="Permalink to this definition"></a></dt>
+<dd><p>Reformat the input file to json. The original format of this input file must be</p>
 <blockquote>
 <div><p>{},</p>
 <p>{},</p>
@@ -170,22 +170,24 @@
 <p>{}</p>
 </div></blockquote>
 <dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>None</p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ignore_err</strong> (<em>bool</em>) – Whether to ignore errors for merged files, the default is true</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="preprocessing.merge_json_files_to_csv_file">
-<span class="sig-prename descclassname"><span class="pre">preprocessing.</span></span><span class="sig-name descname"><span class="pre">merge_json_files_to_csv_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ignore_cols</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_err</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#preprocessing.merge_json_files_to_csv_file" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">preprocessing.</span></span><span class="sig-name descname"><span class="pre">merge_json_files_to_csv_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ignore_cols</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'data.csv'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#preprocessing.merge_json_files_to_csv_file" title="Permalink to this definition"></a></dt>
 <dd><p>Merge json files into a csv file</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ignore_cols</strong> (<em>list</em>) – Columns to be ignored, the default is none</p></li>
-<li><p><strong>filename</strong> (<em>str</em>) – Save file name, the default is none</p></li>
-<li><p><strong>ignore_err</strong> (<em>bool</em>) – Whether to ignore errors for merged files, the default is true</p></li>
+<li><p><strong>filename</strong> (<em>str</em>) – Save file name, the default is data.csv</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>

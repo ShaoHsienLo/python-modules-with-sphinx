@@ -13,7 +13,8 @@ paths = [
     "/data/model-input-data",
     "/data/original-data",
     "/data/processed-data",
-    "/log"
+    "/log",
+    "/graph"
 ]
 paths = ["./" + project_name + path for path in paths]
 

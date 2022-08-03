@@ -41,9 +41,7 @@ class Connector:
 
         print("Connected with result code " + str(rc))
 
-        '''
-        If we lose connection or reconnect, the terminal will resubscribe
-        '''
+        # If we lose connection or reconnect, the terminal will resubscribe
         client.subscribe(self.params["topic"])
 
     def on_message(self, client, userdata, msg):
@@ -74,9 +72,7 @@ class Connector:
         MQTT Publisher
         """
 
-        '''
-        ISO 8601 format
-        '''
+        # ISO 8601 format
         ISOTIMEFORMAT = "%Y-%m-%d %H:%M:%S"
 
         logger.info("Connect mqtt ...")

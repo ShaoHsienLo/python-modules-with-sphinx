@@ -160,10 +160,34 @@ pythonprojects:
                 test.cpython-38.pyc
 ```
 
-Ref：https://www.796t.com/content/1546265648.html
+Ref：[link](https://www.796t.com/content/1546265648.html)
 
-Start：
-sphinx-quickstart --ext-autodoc
+- Quick start sphinx with autodoc: 
+    ```
+    sphinx-quickstart --ext-autodoc
+    ```
 
-Build:
-sphinx-build -b html source build & make html
+- Build sphinx and make a api document `index.html`: 
+    ```
+    cd /pythonmodules/docs
+    sphinx-build -b html source build & make html
+    ```
+
+- Create a project (includes some default directories): 
+    ```
+    python create-project.py [project-name]
+    ```
+    
+    The tree structure will be:
+
+        sample
+        │  main.py
+        │
+        ├─config
+        │      config.ini
+        │
+        ├─data
+        │  ├─model-input-data
+        │  ├─original-data
+        │  └─processed-data
+        └─log

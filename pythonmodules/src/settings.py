@@ -4,6 +4,29 @@ from datetime import datetime
 import configparser
 
 
+def set_logger():
+    """
+    Configure the log file
+
+    Parameters
+    ----------
+
+    Returns
+    -------
+    None
+    """
+
+    sink = datetime.now().strftime("%Y-%m-%d")
+    sink = sink + ".log"
+
+    # Add a log file
+    try:
+        logger.add(sink="./log/{}".format(sink), rotation="500MB", encoding="utf-8", enqueue=True, retention="1 day")
+    except Exception as e:
+        logger.error(e)
+        sys.exit(0)
+
+
 def read_config_file(filename: str = "config.ini") -> configparser:
     """
     Read configuration file
@@ -30,28 +53,4 @@ def read_config_file(filename: str = "config.ini") -> configparser:
         logger.error(e)
         sys.exit(0)
 
-
-def set_logger():
-    """
-    Configure the log file
-
-    Parameters
-    ----------
-
-    Returns
-    -------
-    None
-    """
-
-    sink = datetime.now().strftime("%Y-%m-%d")
-    sink = sink + ".log"
-
-    '''
-    Add a log file
-    '''
-    try:
-        logger.add(sink="./log/{}".format(sink), rotation="500MB", encoding="utf-8", enqueue=True, retention="1 day")
-    except Exception as e:
-        logger.error(e)
-        sys.exit(0)
 

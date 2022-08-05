@@ -25,6 +25,8 @@ API
    :members:
 .. automodule:: detect_peaks
    :members:
+.. automodule:: modeling
+   :members:
 
 Indices and tables
 ==================

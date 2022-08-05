@@ -10,6 +10,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy.stats import skew, kurtosis
 from sklearn.preprocessing import StandardScaler, MinMaxScaler, Normalizer
+from pandas_profiling import ProfileReport
+import sweetviz as sv
+import dataprep.eda as dpeda
+from autoviz.AutoViz_Class import AutoViz_Class
 
 
 class FeatureSelection:
@@ -59,9 +63,10 @@ class EDA:
 
     """
 
-    def __init__(self, dataset: pd.DataFrame, compare_cols: list = None):
+    def __init__(self, dataset: pd.DataFrame, compare_cols: list = None, filename: str = None):
         self.dataset = dataset
         self.compare_cols = compare_cols
+        self.filename = filename
 
     def corr(self):
         feature_corr = self.dataset.corr()
@@ -75,6 +80,24 @@ class EDA:
         sns.barplot(self.compare_cols[0], self.compare_cols[1], data=self.dataset)
         plt.savefig("./graph/barplot.png")
         plt.close()
+
+    def pandas_profiling(self):
+        report = ProfileReport(self.dataset, title="Pandas Profiling")
+        report.to_file("./eda/Pandas-Profiling.html")
+
+    def sweetviz(self):
+        report = sv.analyze(self.dataset)
+        report.show_html(filepath='./eda/Sweetviz-Profiling.html', open_browser=False)
+        # compare_report = sv.compare([self.dataset, "Train"], [self.test_dataset, "Test"], "Survived")
+        # compare_report.show_html("compare_report.html")
+
+    def dataprep(self):
+        report = dpeda.create_report(self.dataset, title='Sataprep Profiling')
+        report.save('./eda/Dataprep-Profiling')
+
+    def autoviz(self):
+        AV = AutoViz_Class()
+        df_av = AV.AutoViz('Autoviz-Profiling.csv', chart_format="svg", save_plot_dir="./eda")
 
 
 class TimeDomainAnalysis:

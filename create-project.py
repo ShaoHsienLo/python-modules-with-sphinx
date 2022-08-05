@@ -14,7 +14,8 @@ paths = [
     "/data/original-data",
     "/data/processed-data",
     "/log",
-    "/graph"
+    "/graph",
+    "eda"
 ]
 paths = ["./" + project_name + path for path in paths]
 

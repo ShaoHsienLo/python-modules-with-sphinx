@@ -83,7 +83,7 @@ class EDA:
 
     def pandas_profiling(self):
         report = ProfileReport(self.dataset, title="Pandas Profiling", minimal=True)
-        report = ProfileReport(self.dataset, title="Pandas Profiling")
+        # report = ProfileReport(self.dataset, title="Pandas Profiling")
         report.to_file("./eda/Pandas-Profiling.html")
 
     def sweetviz(self):

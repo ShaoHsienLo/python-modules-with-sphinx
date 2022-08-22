@@ -61,7 +61,7 @@ class Connector:
             client.on_connect = self.on_connect
             client.on_message = self.on_message
             client.username_pw_set(self.params["username"], self.params["password"])
-            client.connect(self.params["url"], self.params["port"], 5)
+            client.connect(self.params["url"], self.params["port"], 6)
             client.loop_forever()
         except Exception as e:
             logger.error(e)

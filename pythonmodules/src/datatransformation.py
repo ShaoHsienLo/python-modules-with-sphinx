@@ -82,7 +82,7 @@ class EDA:
         plt.close()
 
     def pandas_profiling(self):
-        report = ProfileReport(self.dataset, title="Pandas Profiling")
+        report = ProfileReport(self.dataset, title="Pandas Profiling", minimal=True)
         report.to_file("./eda/Pandas-Profiling.html")
 
     def sweetviz(self):
@@ -97,7 +97,7 @@ class EDA:
 
     def autoviz(self):
         AV = AutoViz_Class()
-        df_av = AV.AutoViz('Autoviz-Profiling.csv', chart_format="svg", save_plot_dir="./eda")
+        df_av = AV.AutoViz(self.dataset, chart_format="svg", save_plot_dir="./eda", lowess=True, verbose=2)
 
 
 class TimeDomainAnalysis:
